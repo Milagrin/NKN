@@ -3,63 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Font Google-->
+    <link rel="icon" href="/img/NKN.png" type="images/png">
+    <title>Pagina principal - NKN</title>
+    <link rel="stylesheet" href="/css/estilos-index.css">
+    <link rel="stylesheet" href="/css/banner-index.css">
+    <link rel="stylesheet" href="/css/keyframes.css">
+    <link rel="stylesheet" href="/externos/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/externos/icons/css/social.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Login Y Registro - NKN</title>
-    <link rel="stylesheet" href="/css/estilos-registro.css">
 </head>
+
 <body>
     
-    <main>
+    <header>
+        <nav class="nkn_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="/html/index.html">NKN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/html/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/html/Login.html">Inicio sesión <span class="sr-only">(current)</span></a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Acciones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Clientes</a>
+                    <a class="dropdown-item" href="#">Contratos</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
 
-        <div class="container__all">
-
-            <!--Clase Parte de atras-->
-            <div class="back__box">
-                <!-- Parte del login -->
-                <div class="back__box-login">
-                    <h3>Ya tienes una cuenta?</h3>
-                    <p>Inicia sesión para entrar en la pagina</p>
-                    <button id="btn__log-in">Iniciar sesión</button>
+    <section>
+        <div class="nkn_cont_banner">
+            <div class="nkn_sobra">
+                <h1>Seguros NKN</h1>
+                <p>Seguros de vida mi estilo de vida</p>
+                <hr/>
+                <div class="nkn_container_banner_link">
+                    <a class="nkn_banner_link" href="/html/Login.html"> Inicia sesión</a>
+                    <a class="nkn_banner_link_1" href=""> Clientes</a>
+                    <a class="nkn_banner_link_2" href=""> Contratos</a>
                 </div>
-
-                <!-- Parte del Resgistro -->
-                <div class="back__box-register">
-                    <h3>Aun no tienes una cuenta?</h3>
-                    <p> Registrate para poder entrar en la pagina</p>
-                    <button id="btn__register">Registrarse</button>
-                </div>
-            </div><!--END Clase Parte de atras-->
-
-            <!-- Clase de formularios-->
-            <div class="container__login-register">
-                
-                <!-- Formulario Inicio de sesion-->
-                <form action="" class="form__login">
-
-                    <h2>Iniciar sesión</h2>
-                    <input type="text" placeholder="Gmail">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Entrar</button>
-
-                </form>
-
-                <!-- Formulario registro-->
-                <form action="" class="form__register">
-
-                    <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre Y apellidos">
-                    <input type="text" placeholder="Gmail">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Registrarse</button>
-
-                </form>
-            </div><!-- END Clase de formularios -->
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!--SCRIPTS-->
-    <script src="/js/script-registro.js"></script>
+    <section>
+        <div class="container">
+            <div class="row nkn_container_1">
+                <div class="col-md-9">
+                    <h2>
+                        <b>NKN</b>
+                    </h2>
+                    <p class="nkn_container_move"><i>Seguros de vida mi estilo de vida</i></p>
+                    <hr/>
+                    <p class="nkn_container_move">Somos una empresa de seguros que busca lo mejor para sus clientes y familias de nuestros clientes</p>
+
+                    <div class="nkn_container_2_link row-cols-md-3 text-center">
+                        <a href="#" class="btn btn-secondary btn-md"> Visita mi pagina</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="nkn_container_3 col-md-6">
+                    <h2>Presentacion</h2>
+                    <p>NKN es una empresa de seguros conformador inicialmente por 3 personas, la empresa es conocida como una de las mejores empresas de seguros del mercado actual, en busca de nuevos horizontes para sus clientes ha llegado al internet!</p>
+                    <a href=""><i style="font-size: 30px" class="icon-twitter"></i></a>
+                    <a href=""><i style="font-size: 30px" class="icon-facebook"></i></a>
+                    <a href=""><i style="font-size: 30px" class="icon-instagram"></i></a>
+                    <a href=""><i style="font-size: 30px" class="icon-mail"></i></a>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--SRIPTS-->
+    <script src="/externos/boostrap/js/jquery.js"></script>
+    <script src="/externos/boostrap/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
