@@ -103,6 +103,17 @@ main{
     outline: none;
 }
 
+.container__login-register form a{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46a2fd;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
 .container__login-register form button{
     padding: 10px 40px;
     margin-top: 40px;
