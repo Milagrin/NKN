@@ -12,9 +12,6 @@ body{
     background-color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.nkn_navbar div, .nkn_navbar ul{
-    background-color: transparent !important;
-}
 
 .nkn_container_1{
     margin-left: 25%;
