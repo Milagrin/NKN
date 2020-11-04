@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/NKN.png" type="images/png">
-    <title>Clientes</title>
+    <title>Contratos</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../externos/boostrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/clientes-styles.css">
+    <link rel="stylesheet" href="../css/contratos-styles.css">
 </head>
 <body>
-    
     <header>
         <nav class="nkn_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="../html/index.html">NKN</a>
@@ -41,25 +40,39 @@
     </header>
 
     <div class="container">
-        <form id="frmPerson" class="form-horizontal">
+        <form id="frmContrato" class="form-horizontal">
             <div class="form-group">
-                <label for="lblRut" class="col-sm-12 control-label">Rut</label>
+                <label for="lblRutP" class="col-sm-12 control-label">Rut del propietario</label>
                 <div class="col-sm-4">
-                    <input type="text" id="txtRutC" class="form-control" placeholder="Ingrese Rut Clinte">
+                    <input type="text" id="txtRutP" class="form-control" placeholder="Ingrese rut">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="lblName" class="col-lg-2 control-label">Nombre Completo</label>
+                <label for="lblNombreP" class="col-sm-12 control-label">Nombre del propietario</label>
                 <div class="col-sm-4">
-                    <input type="text" id="txtNombreC" class="form-control" placeholder="Ingrese Nombre Completo">
+                    <input type="text" id="txtNombreP" class="form-control" placeholder="Ingrese nombre">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="lblApellidos" class="col-lg-2 control-label">Apellidos</label>
+                <label for="lblFechaI" class="col-sm-12 control-label">Fecha de ingreso</label>
                 <div class="col-sm-4">
-                    <input type="text" id="txtApellidos" class="form-control" placeholder="Ingrese Apellidos">
+                    <input type="datetime-local" id="dtFechaI" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblFechaT" class="col-sm-12 control-label">Fecha de termino</label>
+                <div class="col-sm-4">
+                    <input type="datetime-local" id="dtFechaT" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblTipoC" class="col-sm-12 control-label">Tipo contrato</label>
+                <div class="col-sm-4">
+                    <input type="text" id="txtTipoC" class="form-control" placeholder="Ingrese tipo de contrato">
                 </div>
             </div>
 
@@ -78,7 +91,6 @@
     <!--SRIPTS-->
     <script src="../externos/boostrap/js/jquery.js"></script>
     <script src="../externos/boostrap/js/bootstrap.min.js"></script>
-    <script src="../js/clientes.js"></script>
-    
+    <script src="../js/contratos.js"></script>
 </body>
 </html>
