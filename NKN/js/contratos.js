@@ -3,45 +3,49 @@
 $(function () {
     var operation = "C"; //"C"=Crear
     var selected_index = -1; // Indice de el elemento seleccionado en la lista
-    var tblClientes = localStorage.getItem("tblClientes"); //Retornar los datos almacenados
-    tblClientes = JSON.parse(tblClientes); //Convertir String a Object
-    if (tblClientes === null) // Si no hay datos, inicializar un array vacio
-        tblClientes = [];
+    var tblContratos = localStorage.getItem("tblContratos"); //Retornar los datos almacenados
+    tblContratos = JSON.parse(tblContratos); //Convertir String a Object
+    if (tblContratos === null) // Si no hay datos, inicializar un array vacio
+        tblContratos = [];
   
     function Create() {
       //Obtener los valores de la forma HTML y transformalos en String.
-      var person = JSON.stringify({
-        Rut: $("#txtRutC").val(),
-        Name: $("#txtNombreC").val(),
-        Apellido: $("#txtApellidos").val()
+      var contrato = JSON.stringify({
+        Rut: $("#txtRutP").val(),
+        Name: $("#txtNombreP").val(),
+        DateI: $("#dtFechaI").val(),
+        DateF: $("#dtFechaT").val(),
+        Tipo: $("#txtTipoC").val()
       }); 
       //Añadir el objeto a la tabla
-      tblClientes.push(person);
+      tblContratos.push(contrato);
       //Almacenar los datos en el Local Storage
-      localStorage.setItem("tblClientes", JSON.stringify(tblClientes));
+      localStorage.setItem("tblContratos", JSON.stringify(tblContratos));
       alert("Los datos han sido almacenados correctamente"); //Mensaje de alerta
       return true;
     }
   
     function Edit() {
       // Editar el item seleccionado en la tabla
-      tblClientes[selected_index] = JSON.stringify({
-        Rut: $("#txtRutC").val(),
-        Name: $("#txtNombreC").val(),
-        Apellido: $("#txtApellidos").val()
+      tblContratos[selected_index] = JSON.stringify({
+        Rut: $("#txtRutP").val(),
+        Name: $("#txtNombreP").val(),
+        DateI: $("#dtFechaI").val(),
+        DateF: $("#dtFechaT").val(),
+        Tipo: $("#txtTipoC").val()
       });
       //Almacenar los datos en el Local Storage
-      localStorage.setItem("tblClientes", JSON.stringify(tblClientes)); 
+      localStorage.setItem("tblContratos", JSON.stringify(tblContratos)); 
       alert("Los datos han sido editados correctamente"); //Mensaje de alerta
       return true;
     }
   
     function Delete() {
       //Eliminar el elemento seleccionado en la tabla
-      tblClientes.splice(selected_index, 1); 
+      tblContratos.splice(selected_index, 1); 
       //Actualizar los datos del Local Storage
-      localStorage.setItem("tblClientes", JSON.stringify(tblClientes)); 
-      alert("Persona Eliminada correctamente"); //Mensaje de alerta
+      localStorage.setItem("tblContratos", JSON.stringify(tblContratos)); 
+      alert("Contrato Eliminado correctamente"); //Mensaje de alerta
     }
   
     function List() {
@@ -51,25 +55,29 @@ $(function () {
             "<tr>"+
             "<th>Rut</th>"+
             "<th>Nombre</th>"+
-            "<th>Apellidos</th>"+
+            "<th>Fecha Inicio</th>"+
+            "<th>Fecha Termino</th>"+
+            "<th>Tipo Contrato</th>"+
             "</tr>"+
             "</thead>"+
             "<tbody>"+
             "</tbody>"
               ); //Agregar la tabla a la estructura HTML
-      for (var i in tblClientes) {
-          var per = JSON.parse(tblClientes[i]);
+      for (var i in tblContratos) {
+          var con = JSON.parse(tblContratos[i]);
           $("#tbList tbody").append("<tr>"+
-            "<td>" + per.Rut + "</td>"+
-            "<td>" + per.Name + "</td>"+
-            "<td>" + per.Apellido + "</td>"+
+            "<td>" + con.Rut + "</td>"+
+            "<td>" + con.Name + "</td>"+
+            "<td>" + con.DateI + "</td>"+
+            "<td>" + con.DateF + "</td>"+
+            "<td>" + con.Tipo + "</td>"+
             "<td><img src='/img/edit.png' alt='Edit" + i + "' class='btnEdit'/>&nbsp &nbsp<img src='/img/delete.png' alt='Delete" + i + "' class='btnDelete'/></td>" +
             "</tr>"
         );
       } //Recorrer y agregar los items a la tabla HTML
     }
   
-    $("#frmPerson").bind("submit", function () {
+    $("#frmContrato").bind("submit", function () {
       if (operation === "C")
           return Create();
       else
@@ -83,12 +91,14 @@ $(function () {
       //Obtener el identificador del item a ser editado
       selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
       // Convertir de JSON al formato adecuando para editarlos datos
-      var per = JSON.parse(tblClientes[selected_index]); 
-      $("#txtRutC").val(per.Rut);
-      $("#txtNombreC").val(per.Name);
-      $("#txtApellidos").val(per.Apellido);
-      $("txtRutC").attr("readonly", "readonly");
-      $("txtNombreC").focus();
+      var con = JSON.parse(tblContratos[selected_index]); 
+       $("#txtRutP").val(con.Rut);
+        $("#txtNombreP").val(con.Name);
+        $("#dtFechaI").val(con.DateI);
+        $("#dtFechaT").val(con.DateF);
+        $("#txtTipoC").val(con.Tipo);
+        $("txtRutP").attr("readonly", "readonly");
+        $("txtNombreP").focus();
     });
   
     $(".btnDelete").bind("click", function () {
