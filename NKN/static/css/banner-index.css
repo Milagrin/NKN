@@ -1,0 +1,81 @@
+.nkn_cont_banner{
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/portada.jpg);
+}
+
+.nkn_sobra{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin: auto;
+}
+
+.nkn_sobra hr{
+    border-top: 1px solid #fff;
+}
+
+.nkn_sobra h1{
+    font-size: 8vw;
+    margin-bottom: 10px;
+}
+
+.nkn_sobra p{
+    font-size: 4vw;
+    margin-bottom: 10ox;
+}
+
+.nkn_container_banner_link{
+    margin: 15px;
+    position: relative;
+}
+
+.nkn_container_banner_link a{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 1px;
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.nkn_container_banner_link a:hover{
+    background-color: #fff;
+    color: #111;
+}
+
+.nkn_banner_link{
+    opacity: 0;
+    animation: nkn_keyframes_aparecer_de_arriba 1s;
+    -webkit-animation: nkn_keyframes_aparecer_de_arriba 1s;
+    animation-fill-mode: forwards;
+}
+
+.nkn_banner_link_1{
+    opacity: 0;
+    animation: nkn_keyframes_aparecer_de_arriba 1s;
+    -webkit-animation: nkn_keyframes_aparecer_de_arriba 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.nkn_banner_link_2{
+    opacity: 0;
+    animation: nkn_keyframes_aparecer_de_arriba 1s;
+    -webkit-animation: nkn_keyframes_aparecer_de_arriba 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}

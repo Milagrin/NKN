@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Centrar todo */
+.container{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/*Encabezado de la tabla de personas*/
+#tblList thead{
+    background: gray;
+    color: #FFF;
+}
+
+/*Pie de página HTML*/
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;  
+    text-align: right;
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+}
+
+.form-group#contrasena-group::before{
+    content: "\f022";
+}
