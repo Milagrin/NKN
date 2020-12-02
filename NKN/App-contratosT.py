@@ -20,13 +20,13 @@ def contratos_index():
     datos = cur.fetchall()
     return render_template('contratos_trabajadores.html', contrato = datos)
 
-@app.route('/edit_contrato/<string:id>')
-def get_contrato(id):
+@app.route('/edit_contrato/<string:Rut>')
+def get_contrato(Rut):
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM contrato WHERE id = %s',(id))
+    cur.execute('SELECT * FROM contrato WHERE rut_propietario = %s',(Rut))
     datos = cur.fetchall()
     return render_template('update-contratos.html', contrato = datos[0])
-
+    
 @app.route('/update/<string:rut>', methods = ['POST'])
 def update_contratos(rut):
     if request.method == 'POST':
